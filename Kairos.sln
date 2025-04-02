@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D2518846-A6A9-4C56-A7A8-85EC0B498538}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{54AAC49E-1AF6-4993-BC01-9BA0DCA54131}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Domain", "src\backend\Kairos.Domain\Kairos.Domain.csproj", "{80AEA92B-3362-46ED-9946-89EE967B5817}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Infrastructure", "src\backend\Kairos.Infrastructure\Kairos.Infrastructure.csproj", "{66057FB7-3A1C-4DAA-9812-A0B97C84429A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Application", "src\backend\Kairos.Application\Kairos.Application.csproj", "{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Presentation", "src\backend\Kairos.Presentation\Kairos.Presentation.csproj", "{14F35EEC-AC52-46DF-AC54-E0E6640B5785}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{5791C768-6B25-4383-A153-EAA68B5146E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kairos.Test", "test\Kairos.Test\Kairos.Test.csproj", "{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80AEA92B-3362-46ED-9946-89EE967B5817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80AEA92B-3362-46ED-9946-89EE967B5817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80AEA92B-3362-46ED-9946-89EE967B5817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80AEA92B-3362-46ED-9946-89EE967B5817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66057FB7-3A1C-4DAA-9812-A0B97C84429A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66057FB7-3A1C-4DAA-9812-A0B97C84429A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66057FB7-3A1C-4DAA-9812-A0B97C84429A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66057FB7-3A1C-4DAA-9812-A0B97C84429A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F35EEC-AC52-46DF-AC54-E0E6640B5785}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F35EEC-AC52-46DF-AC54-E0E6640B5785}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F35EEC-AC52-46DF-AC54-E0E6640B5785}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F35EEC-AC52-46DF-AC54-E0E6640B5785}.Release|Any CPU.Build.0 = Release|Any CPU
+		{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54AAC49E-1AF6-4993-BC01-9BA0DCA54131} = {D2518846-A6A9-4C56-A7A8-85EC0B498538}
+		{80AEA92B-3362-46ED-9946-89EE967B5817} = {54AAC49E-1AF6-4993-BC01-9BA0DCA54131}
+		{66057FB7-3A1C-4DAA-9812-A0B97C84429A} = {54AAC49E-1AF6-4993-BC01-9BA0DCA54131}
+		{4E58BB2C-DA4F-46F3-959F-577BDFFAA63A} = {54AAC49E-1AF6-4993-BC01-9BA0DCA54131}
+		{14F35EEC-AC52-46DF-AC54-E0E6640B5785} = {54AAC49E-1AF6-4993-BC01-9BA0DCA54131}
+		{991C7908-F3CD-4E02-8185-DEA8B0EBC8EA} = {5791C768-6B25-4383-A153-EAA68B5146E1}
+	EndGlobalSection
+EndGlobal
