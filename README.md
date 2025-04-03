@@ -34,8 +34,8 @@ A estrutura do projeto segue uma organização modular e de fácil manutenção:
 │   │   ├── 📁 Kairos.Infrastructure/                   # Acesso a dados e integração com o banco de dados
 │   ├── 📁 frontend/                                # Código do frontend
 │   
-├── 📂 tests/                                   # Código do teste
-│   ├── 📁 Kairos.Tests/                            # Projetos de testes
+├── 📂 test/                                    # Código do teste
+│   ├── 📁 Kairos.Test/                             # Projetos de testes
 │   │   ├── 📁 UnitTests/                               # Testes de unidade
 │   │   ├── 📁 IntegrationTests/                        # Testes de integração
 │
