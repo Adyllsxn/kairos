@@ -1,5 +1,5 @@
 namespace Kairos.Infrastructure.Context;
-public class ConnectionStringContext
+public static class ConnectionStringContext
 {
-    
+    public const string ConnectionSQLServer = "DefaultConnection";
 }
