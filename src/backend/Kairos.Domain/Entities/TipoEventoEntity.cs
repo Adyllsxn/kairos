@@ -7,7 +7,7 @@ public sealed class TipoEventoEntity: EntityBase, IAgragateRoot
     public TipoEventoEntity(){}
     public TipoEventoEntity(int id, string nome)
     {
-        DomainExceptionValidation.When(Id <=0 , "ID deve ser maior que zero.");
+        DomainExceptionValidation.When(id <= 0 , "ID deve ser maior que zero.");
         Id = id;
         ValidationDomain(nome);
     }
