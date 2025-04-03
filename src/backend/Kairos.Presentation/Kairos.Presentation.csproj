@@ -10,4 +10,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="8.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Kairos.Application/Kairos.Application.csproj" />
+    <ProjectReference Include="../Kairos.Domain/Kairos.Domain.csproj" />
+    <ProjectReference Include="../Kairos.Infrastructure/Kairos.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../Kairos.Domain/Kairos.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
