@@ -4,7 +4,7 @@ public sealed class TipoEventoEntity: EntityBase, IAgragateRoot
     public string Nome { get; private set; } = null!;
 
     [JsonConstructor]
-    public TipoEventoEntity(){}
+    private TipoEventoEntity(){}
     public TipoEventoEntity(int id, string nome)
     {
         DomainExceptionValidation.When(id <= 0 , "ID deve ser maior que zero.");
@@ -22,7 +22,7 @@ public sealed class TipoEventoEntity: EntityBase, IAgragateRoot
     public void ValidationDomain(string nome)
     {
         DomainExceptionValidation.When(string.IsNullOrWhiteSpace(nome), "Nome é obrigatório.");
-        DomainExceptionValidation.When(nome.Length >= 60, "Nome deve ter menor de 60 caracteres.");
+        DomainExceptionValidation.When(nome.Length > 60, "Nome deve ter no máximo 60 caracteres.");
 
         Nome = nome;
     }

@@ -1,12 +1,8 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Kairos.Application.Services
+namespace Kairos.Application.Services;
+public class TipoEventoService(GetTipoEventosUseCase getall) : ITipoEventoService
 {
-    public class TipoEventoService
+    public async Task<ResponseModel<List<GetTipoEventosDto>>> GetAllAsync(CancellationToken token)
     {
-        
+        return await getall.GetAllAsync(token);
     }
 }

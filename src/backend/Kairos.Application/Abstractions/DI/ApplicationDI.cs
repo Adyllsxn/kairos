@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Kairos.Application.Abstractions.DI
+namespace Kairos.Application.Abstractions.DI;
+public static class ApplicationDI
 {
-    public class ApplicationDI
+    public static void AddApplicationDI(this IServiceCollection service)
     {
-        
+        service.AddUseCase();
+        service.AddService();
     }
 }

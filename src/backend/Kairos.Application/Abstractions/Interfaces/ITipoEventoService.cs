@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace Kairos.Application.Abstractions.Interfaces
 {
     public interface ITipoEventoService
     {
-        
+        Task<ResponseModel<List<GetTipoEventosDto>>> GetAllAsync(CancellationToken token);
     }
 }

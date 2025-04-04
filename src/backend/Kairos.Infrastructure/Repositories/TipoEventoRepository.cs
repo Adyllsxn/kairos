@@ -50,10 +50,11 @@ public class TipoEventoRepository(AppDbContext context) : ITipoEventoRepository
         try
         {
             var response = await context.TipoEventos.AsNoTracking().ToListAsync(token);
-            if (response == null)
+            if (response == null || response.Count == 0)
             {
-                new ResponseModel<List<TipoEventoEntity>?>(null, 404, "Nenhum dado encontrado");
+                return new ResponseModel<List<TipoEventoEntity>?>(null, 404, "Nenhum dado encontrado.");
             }
+
             return new ResponseModel<List<TipoEventoEntity>?>(response, 200, "Lista de tipo de eventos.");
         }
         catch (Exception ex)
@@ -96,10 +97,11 @@ public class TipoEventoRepository(AppDbContext context) : ITipoEventoRepository
                     return new ResponseModel<List<TipoEventoEntity>?>(null, 400, "Parâmetros não podem estar vazio.");
                 }
                 var response = await context.TipoEventos.Where(expression).ToListAsync(token);
-                if(response == null)
+                if(response == null || response.Count == 0)
                 {
-                    return new ResponseModel<List<TipoEventoEntity>?>(null, 404, "ID não encontrado.");
+                    return new ResponseModel<List<TipoEventoEntity>?>(null, 404, "Nenhum dado encontrado.");
                 }
+
                 return new ResponseModel<List<TipoEventoEntity>?>(response, 200, "Dados encontrado.");
             }
             catch (Exception ex)
