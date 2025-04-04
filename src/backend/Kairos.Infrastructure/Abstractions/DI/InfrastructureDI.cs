@@ -5,6 +5,7 @@ public static class InfrastructureDI
     {
         #region </Repository>
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ITipoEventoRepository, TipoEventoRepository>();
         #endregion
 
         #region </DbConnection>
