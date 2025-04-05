@@ -24,4 +24,4 @@ jobs:
         run: dotnet build test/Kairos.Test/Kairos.Test.csproj --no-restore
 
       - name: Testar com xUnit
-        run: dotnet test test/Kairos.Tests/Kairos.Tests.csproj --no-build
+        run: dotnet test test/Kairos.Test/Kairos.Test.csproj --no-build
