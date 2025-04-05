@@ -1,0 +1,27 @@
+name: Presentation CI
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore test/Kairos.Test/Kairos.Test.csproj
+
+      - name: Build do projeto
+        run: dotnet build test/Kairos.Test/Kairos.Test.csproj --no-restore
+
+      - name: Testar com xUnit
+        run: dotnet test test/Kairos.Tests/Kairos.Tests.csproj --no-build
