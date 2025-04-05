@@ -1,5 +1,5 @@
 namespace Kairos.Application.UseCases.TipoEvento.GetAllUsecase;
-public static class GetTipoEventosDtoExpression
+public static class GetTipoEventosDtoExtensions
 {
     public static GetTipoEventosDto ToDTO (this TipoEventoEntity entity)
     {

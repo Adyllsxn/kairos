@@ -15,6 +15,8 @@
     global using Kairos.Application.Abstractions.DI.Architecture;
     global using Kairos.Application.Services;
     global using Kairos.Application.UseCases.TipoEvento.GetAllUsecase;
+    global using Kairos.Application.UseCases.TipoEvento.SearchUseCase;
+    global using Kairos.Application.UseCases.TipoEvento.GetByIdUseCase;
 #endregion
 
 #region </Domain>

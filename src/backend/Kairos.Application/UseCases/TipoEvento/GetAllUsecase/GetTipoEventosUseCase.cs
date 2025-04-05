@@ -18,7 +18,7 @@ public class GetTipoEventosUseCase(ITipoEventoRepository repository)
             {
                 return new ResponseModel<List<GetTipoEventosDto>>(
                     new List<GetTipoEventosDto>(), 
-                    200, 
+                    404, 
                     "Nenhum dado encontrado");
             }
             var result = response.Data.ToDTO().ToList();

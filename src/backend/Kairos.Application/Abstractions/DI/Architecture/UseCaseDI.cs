@@ -5,6 +5,8 @@ public static class UseCaseDI
     {
         #region <TipoEventos>
             service.AddScoped<GetTipoEventosUseCase>();
+            service.AddScoped<GetTipoEventoByIdUseCase>();
+            service.AddScoped<SearchTipoEventoUseCase>();
         #endregion
         
     }
