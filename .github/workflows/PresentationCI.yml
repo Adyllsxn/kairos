@@ -24,4 +24,5 @@ jobs:
             run: dotnet build src/backend/Kairos.Presentation/Kairos.Presentation.csproj --no-restore
             
           - name: Run do projeto
-            run: dotnet run src/backend/Kairos.Presentation/Kairos.Presentation.csproj --no-restore
+            working-directory: src/backend/Kairos.Presentation
+            run: dotnet run --no-restore
