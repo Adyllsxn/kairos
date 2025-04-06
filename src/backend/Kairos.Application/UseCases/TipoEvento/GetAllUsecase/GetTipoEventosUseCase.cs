@@ -6,14 +6,7 @@ public class GetTipoEventosUseCase(ITipoEventoRepository repository)
         try
         {
             var response = await repository.GetAllAsync(token);
-            
-            if (!response.IsSuccess)
-            {
-                return new ResponseModel<List<GetTipoEventosDto>>(
-                    null, 
-                    response.Code, 
-                    response.Message);
-            }
+
             if (response.Data == null || !response.Data.Any())
             {
                 return new ResponseModel<List<GetTipoEventosDto>>(
@@ -21,7 +14,7 @@ public class GetTipoEventosUseCase(ITipoEventoRepository repository)
                     404, 
                     "Nenhum dado encontrado");
             }
-            var result = response.Data.ToDTO().ToList();
+            var result = response.Data.ToDTOGetTipoEventos().ToList();
             
             return new ResponseModel<List<GetTipoEventosDto>>(
                 result, 

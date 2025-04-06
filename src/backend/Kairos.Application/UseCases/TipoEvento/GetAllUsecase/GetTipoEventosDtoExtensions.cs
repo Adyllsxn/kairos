@@ -1,7 +1,7 @@
 namespace Kairos.Application.UseCases.TipoEvento.GetAllUsecase;
 public static class GetTipoEventosDtoExtensions
 {
-    public static GetTipoEventosDto ToDTO (this TipoEventoEntity entity)
+    public static GetTipoEventosDto ToDTOGetTipoEventos (this TipoEventoEntity entity)
     {
         return new GetTipoEventosDto
         {
@@ -9,8 +9,8 @@ public static class GetTipoEventosDtoExtensions
             Nome = entity.Nome
         };
     }
-    public static IEnumerable<GetTipoEventosDto> ToDTO(this IEnumerable<TipoEventoEntity> dto)
+    public static IEnumerable<GetTipoEventosDto> ToDTOGetTipoEventos(this IEnumerable<TipoEventoEntity> dto)
     {
-        return dto.Select(entity => entity.ToDTO());
+        return dto.Select(entity => entity.ToDTOGetTipoEventos());
     }
 }

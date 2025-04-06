@@ -1,7 +1,7 @@
 namespace Kairos.Application.UseCases.TipoEvento.SearchUseCase;
 public static class SearchTipoEventoDtoExtensions
 {
-    public static SearchTipoEventoDto ToDTO (this TipoEventoEntity entity)
+    public static SearchTipoEventoDto ToDTOSearchTipoEvento (this TipoEventoEntity entity)
     {
         return new SearchTipoEventoDto
         {
@@ -9,8 +9,8 @@ public static class SearchTipoEventoDtoExtensions
             Nome = entity.Nome
         };
     }
-    public static IEnumerable<SearchTipoEventoDto> ToDTO(this IEnumerable<TipoEventoEntity> dto)
+    public static IEnumerable<SearchTipoEventoDto> ToDTOSearchTipoEvento(this IEnumerable<TipoEventoEntity> dto)
     {
-        return dto.Select(entity => entity.ToDTO());
+        return dto.Select(entity => entity.ToDTOSearchTipoEvento());
     }
 }

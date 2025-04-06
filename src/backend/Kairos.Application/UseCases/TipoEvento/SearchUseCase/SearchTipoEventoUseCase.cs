@@ -21,7 +21,7 @@ public class SearchTipoEventoUseCase(ITipoEventoRepository repository)
                     404, 
                     "Nenhum dado encontrado");
             }
-            var result = response.Data.ToDTO().ToList();
+            var result = response.Data.ToDTOSearchTipoEvento().ToList();
             
             return new ResponseModel<List<SearchTipoEventoDto>>(
                 result, 
@@ -33,7 +33,7 @@ public class SearchTipoEventoUseCase(ITipoEventoRepository repository)
             return new ResponseModel<List<SearchTipoEventoDto>>(
                 null, 
                 500, 
-                $"Erro ao obter tipos de evento. Erro: {ex.Message}");
+                $"Erro ao pesquisar tipos de evento. Erro: {ex.Message}");
         }
 
     }

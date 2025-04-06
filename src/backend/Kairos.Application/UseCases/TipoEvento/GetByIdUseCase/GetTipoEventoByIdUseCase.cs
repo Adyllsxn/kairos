@@ -21,7 +21,7 @@ public class GetTipoEventoByIdUseCase(ITipoEventoRepository repository)
                     404, 
                     "Nenhum dado encontrado");
             }
-            var result = response.Data.ToDTO();
+            var result = response.Data.ToDTOToDTOGetTipoEventoById();
             
             return new ResponseModel<GetTipoEventoByIdDto>(
                 result, 
@@ -33,7 +33,7 @@ public class GetTipoEventoByIdUseCase(ITipoEventoRepository repository)
             return new ResponseModel<GetTipoEventoByIdDto>(
                 null, 
                 500, 
-                $"Erro ao obter tipos de evento. Erro: {ex.Message}");
+                $"Erro ao obter tipos de eventos por id. Erro: {ex.Message}");
         }
     }
 }

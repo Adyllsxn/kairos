@@ -17,6 +17,9 @@
     global using Kairos.Application.UseCases.TipoEvento.GetAllUsecase;
     global using Kairos.Application.UseCases.TipoEvento.SearchUseCase;
     global using Kairos.Application.UseCases.TipoEvento.GetByIdUseCase;
+    global using Kairos.Application.UseCases.TipoEvento.CreateUseCase;
+    global using Kairos.Application.UseCases.TipoEvento.DeleteUseCase;
+    global using Kairos.Application.UseCases.TipoEvento.UpdateUseCase;
 #endregion
 
 #region </Domain>
