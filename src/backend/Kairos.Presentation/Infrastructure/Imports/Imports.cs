@@ -6,6 +6,7 @@
 #endregion
 
 #region </Presentation>
+    global using Kairos.Presentation.Domain.Common;
     global using Kairos.Presentation.Infrastructure.Extensions;
     global using Kairos.Presentation.Infrastructure.Extensions.Architecture;
 #endregion

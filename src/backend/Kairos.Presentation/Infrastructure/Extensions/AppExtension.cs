@@ -3,6 +3,7 @@ public static class AppExtension
 {
     public static void UseArchitectureExtensions (this WebApplication app)
     {
+        app.UseCorsExtensions();
         app.UseHttpsRedirection();
         app.UseSwaggerExtensions();
         app.UseAuthorization();

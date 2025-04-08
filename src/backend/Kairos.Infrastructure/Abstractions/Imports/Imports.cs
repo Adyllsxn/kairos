@@ -13,6 +13,7 @@
     global using Kairos.Domain.Entities;
     global using Kairos.Domain.Abstractions.Interfaces;
     global using Kairos.Domain.Abstractions.Response;
+    global using Kairos.Domain.Abstractions.Pagination;
 #endregion
 
 #region </Infrastructure>

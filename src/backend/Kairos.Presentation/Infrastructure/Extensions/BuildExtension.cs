@@ -5,6 +5,7 @@ public static class BuildExtension
     {
         builder.Services.AddControllers();
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddCorsExtensions();
         builder.Services.AddSwaggerExtensions();
         builder.Services.AddInfrastructureDI(builder.Configuration);
         builder.Services.AddApplicationDI();
