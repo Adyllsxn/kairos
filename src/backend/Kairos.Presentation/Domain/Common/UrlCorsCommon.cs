@@ -3,5 +3,5 @@ public static class UrlCorsCommon
 {
     public const string CorsPolicyNames = "kairos";
     public const string BackendUrl = "https://localhost:7167;http://localhost:5128";
-    public const string FrontendUrl = "";
+    public const string FrontendUrl = "http://127.0.0.1:5500";
 }
