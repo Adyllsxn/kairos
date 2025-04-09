@@ -19,5 +19,6 @@ public class EventosMapping : IEntityTypeConfiguration<EventosEntity>
                 IsRequired(true);
         builder.Property(x => x.TipoEventoId).
                 IsRequired(true);
+        builder.HasOne(x => x.TipoEvento).WithMany(x => x.Eventos).HasForeignKey(x => x.TipoEventoId).HasConstraintName("FK_TipoEvento_Eventos").OnDelete(DeleteBehavior.Cascade);
     }
 }

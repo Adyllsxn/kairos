@@ -1,10 +1,28 @@
 namespace Kairos.Infrastructure.Repositories;
-public class EventosRepository : IEventoRepository
+public class EventosRepository(AppDbContext context) : IEventoRepository
 {
-    public Task<ResponseModel<EventosEntity>> CreateAsync(EventosEntity entity, CancellationToken token)
-    {
-        throw new NotImplementedException();
-    }
+    #region </Create>
+        public async Task<ResponseModel<EventosEntity>> CreateAsync(EventosEntity entity, CancellationToken token)
+        {
+            try
+            {
+                if(entity == null)
+                {
+                    return new ResponseModel<EventosEntity>(null, 400, "Parâmetros não podem estar vazio.");
+                }
+                await context.Eventos.AddAsync(entity, token);
+                return new ResponseModel<EventosEntity>(entity, 201, "Tipo de evento criado.");
+            }
+            catch (Exception ex)
+            {
+                return new ResponseModel<EventosEntity>(
+                    null,
+                    500,
+                    $"Erro ao criar tipo de eveto. Erro {ex.Message}."
+                );
+            }
+        }
+    #endregion
 
     public Task<ResponseModel<bool>> DeleteAsync(int entityId, CancellationToken token)
     {

@@ -10,12 +10,16 @@ public class TipoEventoRepository(AppDbContext context) : ITipoEventoRepository
                 {
                     return new ResponseModel<TipoEventoEntity>(null, 400, "Parâmetros não podem estar vazio.");
                 }
-                await context.AddAsync(entity, token);
+                await context.TipoEventos.AddAsync(entity, token);
                 return new ResponseModel<TipoEventoEntity>(entity, 201, "Tipo de evento criado.");
             }
             catch (Exception ex)
             {
-                return new ResponseModel<TipoEventoEntity>(null, 500, $"Erro ao criar tipo de eveto. Erro {ex.Message}.");
+                return new ResponseModel<TipoEventoEntity>(
+                    null, 
+                    500, 
+                    $"Erro ao criar tipo de eveto. Erro {ex.Message}."
+                    );
             }
         }
     #endregion

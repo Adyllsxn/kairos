@@ -8,6 +8,9 @@ public sealed class EventosEntity: EntityBase, IAgragateRoot
     public string Foto { get; set; } = null!;
     public int TipoEventoId { get; set; }
 
+    [JsonIgnore]
+    public TipoEventoEntity TipoEvento { get; set; } = null!;
+
     private EventosEntity(){}
     public EventosEntity(int id, string nome, string descricao, DateTime datahora, string local, string foto, int tipoEventoId)
     {
