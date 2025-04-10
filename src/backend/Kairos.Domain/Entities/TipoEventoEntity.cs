@@ -18,7 +18,7 @@ public sealed class TipoEventoEntity: EntityBase, IAgragateRoot
     {
         ValidationDomain(nome);
     }
-    public void UpDate(string nome)
+    public void Update(string nome)
     {
         ValidationDomain(nome);
     }
