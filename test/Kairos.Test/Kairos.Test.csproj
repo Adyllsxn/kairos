@@ -24,4 +24,11 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../../src/backend/Kairos.Application/Kairos.Application.csproj" />
+    <ProjectReference Include="../../src/backend/Kairos.Domain/Kairos.Domain.csproj" />
+    <ProjectReference Include="../../src/backend/Kairos.Infrastructure/Kairos.Infrastructure.csproj" />
+    <ProjectReference Include="../../src/backend/Kairos.Presentation/Kairos.Presentation.csproj" />
+  </ItemGroup>
+
 </Project>
